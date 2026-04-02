@@ -28,25 +28,6 @@ function App() {
             <a href="#home" className="text-sm font-semibold tracking-[0.14em] text-[var(--olive-soft)]">
               {portfolioData.brand}
             </a>
-
-            <div className="grid w-full grid-cols-2 gap-2 md:hidden">
-              <SwitchControl
-                leftLabel="PT"
-                rightLabel="EN"
-                checked={language === 'en'}
-                onToggle={() => setLanguage((prev) => (prev === 'en' ? 'pt' : 'en'))}
-                ariaLabel="Toggle language"
-                compact
-              />
-              <SwitchControl
-                leftLabel={ui.themeLight}
-                rightLabel={ui.themeDark}
-                checked={theme === 'dark'}
-                onToggle={() => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))}
-                ariaLabel="Toggle theme"
-                compact
-              />
-            </div>
           </div>
 
           <ul className="-mx-1 flex gap-2 overflow-x-auto pb-1 text-xs text-[var(--muted)] md:mx-0 md:flex-1 md:justify-center md:gap-5 md:overflow-visible md:text-sm">
@@ -61,6 +42,27 @@ function App() {
               </li>
             ))}
           </ul>
+
+          <div className="grid gap-2 md:hidden">
+            <MobileSettingRow
+              label={language === 'en' ? 'Language' : 'Idioma'}
+              value={language === 'en' ? 'EN' : 'PT'}
+              helper={language === 'en' ? 'Switch site copy' : 'Mudar idioma'}
+              onToggle={() => setLanguage((prev) => (prev === 'en' ? 'pt' : 'en'))}
+              toggleLabelLeft="PT"
+              toggleLabelRight="EN"
+              checked={language === 'en'}
+            />
+            <MobileSettingRow
+              label={language === 'en' ? 'Theme' : 'Tema'}
+              value={theme === 'dark' ? 'Dark' : 'Light'}
+              helper={language === 'en' ? 'Change appearance' : 'Mudar aparência'}
+              onToggle={() => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))}
+              toggleLabelLeft={ui.themeLight}
+              toggleLabelRight={ui.themeDark}
+              checked={theme === 'dark'}
+            />
+          </div>
 
           <div className="hidden items-center gap-2 md:flex">
             <SwitchControl
@@ -323,6 +325,30 @@ function SwitchControl({ leftLabel, rightLabel, checked, onToggle, ariaLabel }) 
         {rightLabel}
       </span>
     </button>
+  )
+}
+
+function MobileSettingRow({ label, value, helper, onToggle, toggleLabelLeft, toggleLabelRight, checked }) {
+  return (
+    <div
+      className="flex w-full items-center justify-between gap-3 rounded-2xl border border-[var(--line)] bg-[color:color-mix(in_srgb,var(--surface)_92%,transparent)] px-3 py-3 text-left"
+    >
+      <div className="min-w-0">
+        <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[var(--olive-soft)]">{label}</p>
+        <p className="mt-1 text-sm font-medium text-[var(--text)]">{value}</p>
+        <p className="mt-0.5 text-[11px] text-[var(--muted)]">{helper}</p>
+      </div>
+
+      <div className="shrink-0">
+        <SwitchControl
+          leftLabel={toggleLabelLeft}
+          rightLabel={toggleLabelRight}
+          checked={checked}
+          onToggle={onToggle}
+          ariaLabel={label}
+        />
+      </div>
+    </div>
   )
 }
 

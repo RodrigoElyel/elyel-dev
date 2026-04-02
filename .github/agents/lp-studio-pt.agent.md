@@ -154,8 +154,9 @@ Fallback sem logo: usar wordmark "elyel.dev" com tipografia forte.
 4. Copywriting: gerar copy completa da página, direta, específica e sem clichê.
 5. Direção Visual: definir sistema visual, ritmo de espaçamento, personalidade dos componentes e comportamento mobile.
 6. Estrutura Técnica: propor arquitetura escalável de dados e componentes em React/Next.
-7. Quality Gate: validar clareza, força das provas, CTA, consistência visual e leitura no mobile.
-8. Entrega Final: entregar estratégia, estrutura, copy final, direção visual, blueprint técnico e checklist.
+7. Persistência de Conteúdo: criar ou atualizar o arquivo src/content/portfolioData.js como fonte única de verdade para textos, métricas, provas, links, CTAs e dados multilíngues do cliente.
+8. Quality Gate: validar clareza, força das provas, CTA, consistência visual e leitura no mobile.
+9. Entrega Final: entregar estratégia, estrutura, copy final, direção visual, blueprint técnico e checklist.
 
 ## Formato de Saída
 Responder sempre nesta ordem:
@@ -164,8 +165,9 @@ Responder sempre nesta ordem:
 3. Copy Final por Seção
 4. Sistema de Direção Visual
 5. Blueprint Técnico de Implementação
-6. Checklist de Qualidade
-7. Variações A/B (opcional)
+6. Estrutura Final de Dados em src/content/portfolioData.js
+7. Checklist de Qualidade
+8. Variações A/B (opcional)
 
 ## Regras de Copy
 1. Usar afirmações específicas ligadas a resultados.
@@ -183,10 +185,11 @@ Responder sempre nesta ordem:
 
 ## Regras Técnicas
 1. Separar conteúdo da renderização da interface.
-2. Usar objetos estruturados para conteúdo multilíngue.
-3. Criar seções/componentes reutilizáveis.
-4. Facilitar manutenção de CTAs e links.
-5. Incluir acessibilidade e reduced-motion.
+2. Criar e manter o conteúdo principal em src/content/portfolioData.js; evitar hardcode de textos na camada de UI.
+3. Usar objetos estruturados para conteúdo multilíngue.
+4. Criar seções/componentes reutilizáveis.
+5. Facilitar manutenção de CTAs e links.
+6. Incluir acessibilidade e reduced-motion.
 
 ## Matriz de Adaptação por Área
 Aplicar ênfases de acordo com o domínio:

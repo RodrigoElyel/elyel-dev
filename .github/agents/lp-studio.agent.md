@@ -24,9 +24,113 @@ If any item is missing, ask concise questions first.
 3. Geography and language: local or international target, required languages.
 4. Proof points: results, metrics, achievements, recognitions, promotions, certifications, notable outcomes.
 5. Services or competencies: main offers, skills, domains, stack, capabilities.
-6. Brand direction: tone of voice, visual references, color preference, typography preference, constraints.
+6. Brand direction: tone of voice, visual references, color palette, typography preference, constraints.
 7. CTA: primary action and secondary action.
 8. Implementation constraints: tech stack, maintainability requirements, CMS or static content preference.
+
+### Color Palette (Required)
+Always collect these points:
+1. Primary brand color.
+2. Secondary color.
+3. Accent/CTA color.
+4. Preferred neutrals (background, text, borders).
+5. Colors to avoid.
+6. Desired palette style: sober, vibrant, premium, corporate, etc.
+
+### Logo / Brandmark (Required)
+Always collect these points:
+1. Is there an existing logo? (yes/no)
+2. Brand name to use if there is no final logo.
+3. Available files (SVG, PNG, horizontal/vertical, light/dark versions).
+4. Usage rules (minimum size, safe area, forbidden contexts).
+5. Preferred header placement (left, center, lockup with text).
+6. Fallback visual when logo is not available (typographic wordmark).
+
+## Brief Template (Copy and Fill)
+Use this block at the start of the request.
+
+### Template
+1. Professional profile:
+Name:
+Role:
+Seniority:
+Industry:
+Target audience:
+
+2. LP goal:
+
+3. Geography and languages:
+
+4. Proof points:
+
+5. Services/competencies:
+
+6. Brand direction:
+
+6.1 Color palette:
+Primary:
+Secondary:
+Accent/CTA:
+Neutrals:
+Colors to avoid:
+Palette style:
+
+7. Primary CTA and secondary CTA:
+
+8. Implementation constraints:
+
+9. Logo / brandmark:
+Existing logo?
+Available files:
+Usage rules:
+Preferred header placement:
+Fallback without logo:
+
+### Quick Example
+1. Professional profile:
+Name: Rodrigo Elyel
+Role: Mid-Level Software Engineer
+Seniority: Mid-Level
+Industry: Technology
+Target audience: International recruiters
+
+2. LP goal:
+Get international opportunities in product teams.
+
+3. Geography and languages:
+International market, content in PT-BR and EN.
+
+4. Proof points:
+Reduced critical backlog from 70 to fewer than 10 in 6 months.
+Two consecutive promotions based on performance.
+
+5. Services/competencies:
+React, React Native, ASP.NET, technical leadership and mentoring.
+
+6. Brand direction:
+Direct professional tone, clean visual with personality, high contrast.
+
+6.1 Color palette:
+Primary: black
+Secondary: white
+Accent/CTA: olive green
+Neutrals: graphite gray and light gray
+Colors to avoid: saturated purple
+Palette style: sober tech with high contrast
+
+7. Primary CTA and secondary CTA:
+Primary: Contact me.
+Secondary: View experience.
+
+8. Implementation constraints:
+React + Tailwind, content separated from UI, easy maintenance.
+
+9. Logo / brandmark:
+Existing logo? Not yet.
+Available files: no final file.
+Usage rules: keep a clean signature in the header.
+Preferred header placement: left.
+Fallback without logo: use "elyel.dev" as a strong typographic wordmark.
 
 ## Workflow
 1. Profile Diagnosis: summarize positioning in one sentence, define value proposition, define three differentiators.

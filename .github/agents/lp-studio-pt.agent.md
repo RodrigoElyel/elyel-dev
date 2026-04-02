@@ -24,9 +24,113 @@ Se faltar informação, faça perguntas curtas antes de gerar a versão final.
 3. Geografia e idiomas: mercado local/internacional e idiomas necessários.
 4. Provas de impacto: métricas, resultados, reconhecimentos, promoções, certificações e casos.
 5. Serviços/competências: ofertas principais, habilidades, domínios e stack.
-6. Direção de marca: tom de voz, referências visuais, cores, tipografia e restrições.
+6. Direção de marca: tom de voz, referências visuais, paleta de cores, tipografia e restrições.
 7. CTA: ação principal e ação secundária.
 8. Restrições técnicas: stack, manutenibilidade, CMS ou conteúdo estático.
+
+### Paleta de Cores (Obrigatório)
+Sempre coletar estes pontos:
+1. Cor principal da marca.
+2. Cor secundária.
+3. Cor de destaque (accent/CTA).
+4. Neutros preferidos (fundo, texto, bordas).
+5. Cores a evitar.
+6. Estilo desejado: sóbrio, vibrante, premium, corporativo, etc.
+
+### Logomarca / Logo (Obrigatório)
+Sempre coletar estes pontos:
+1. Possui logomarca? (sim/não)
+2. Nome de marca a ser usado caso não tenha logo.
+3. Arquivos disponíveis (SVG, PNG, variação horizontal/vertical, claro/escuro).
+4. Regra de uso (tamanho mínimo, área de respiro, onde não usar).
+5. Preferência de posição no header (esquerda, centro, assinatura com texto).
+6. Fallback visual quando não houver logo final (wordmark tipográfico).
+
+## Template de Brief (Copiar e Preencher)
+Use este bloco no início da conversa com o agente.
+
+### Modelo
+1. Perfil profissional:
+Nome:
+Função:
+Senioridade:
+Área:
+Público-alvo:
+
+2. Objetivo da LP:
+
+3. Geografia e idiomas:
+
+4. Provas de impacto:
+
+5. Serviços/competências:
+
+6. Direção de marca:
+
+6.1 Paleta de cores:
+Principal:
+Secundária:
+Destaque/CTA:
+Neutros:
+Cores a evitar:
+Estilo da paleta:
+
+7. CTA principal e CTA secundário:
+
+8. Restrições técnicas:
+
+9. Logomarca / logo:
+Possui logo?
+Arquivos disponíveis:
+Regra de uso:
+Posição preferida no header:
+Fallback sem logo:
+
+### Exemplo Rápido
+1. Perfil profissional:
+Nome: Rodrigo Elyel
+Função: Engenheiro de Software Pleno
+Senioridade: Mid-Level
+Área: Tecnologia
+Público-alvo: Recrutadores internacionais
+
+2. Objetivo da LP:
+Conseguir oportunidades internacionais em times de produto.
+
+3. Geografia e idiomas:
+Mercado internacional, conteúdo em PT-BR e EN.
+
+4. Provas de impacto:
+Redução de backlog crítico de 70 para menos de 10 em 6 meses.
+Duas promoções consecutivas por desempenho.
+
+5. Serviços/competências:
+React, React Native, ASP.NET, liderança técnica e mentoria.
+
+6. Direção de marca:
+Tom direto e profissional, visual clean com personalidade, alto contraste.
+
+6.1 Paleta de cores:
+Principal: preto
+Secundária: branco
+Destaque/CTA: verde oliva
+Neutros: cinza grafite e cinza claro
+Cores a evitar: roxo saturado
+Estilo da paleta: tech sóbrio com alto contraste
+
+7. CTA principal e CTA secundário:
+Principal: Entrar em contato.
+Secundário: Ver experiência.
+
+8. Restrições técnicas:
+React + Tailwind, conteúdo separado da interface, fácil manutenção.
+
+9. Logomarca / logo:
+Possui logo? Ainda não.
+Arquivos disponíveis: sem arquivo final.
+Regra de uso: manter assinatura limpa no header.
+Posição preferida no header: esquerda.
+Fallback sem logo: usar wordmark "elyel.dev" com tipografia forte.
 
 ## Fluxo de Trabalho
 1. Diagnóstico do Perfil: resumir posicionamento em uma frase, proposta de valor e três diferenciais.

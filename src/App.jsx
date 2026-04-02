@@ -29,13 +29,14 @@ function App() {
               {portfolioData.brand}
             </a>
 
-            <div className="flex items-center gap-2 md:hidden">
+            <div className="grid w-full grid-cols-2 gap-2 md:hidden">
               <SwitchControl
                 leftLabel="PT"
                 rightLabel="EN"
                 checked={language === 'en'}
                 onToggle={() => setLanguage((prev) => (prev === 'en' ? 'pt' : 'en'))}
                 ariaLabel="Toggle language"
+                compact
               />
               <SwitchControl
                 leftLabel={ui.themeLight}
@@ -43,6 +44,7 @@ function App() {
                 checked={theme === 'dark'}
                 onToggle={() => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))}
                 ariaLabel="Toggle theme"
+                compact
               />
             </div>
           </div>
@@ -294,6 +296,10 @@ function SectionLabel({ children }) {
 }
 
 function SwitchControl({ leftLabel, rightLabel, checked, onToggle, ariaLabel }) {
+  const buttonClasses = checked
+    ? 'border-[var(--olive-soft)] bg-[color:color-mix(in_srgb,var(--olive-soft)_10%,transparent)]'
+    : 'border-[var(--line)]'
+
   return (
     <button
       type="button"
@@ -301,19 +307,19 @@ function SwitchControl({ leftLabel, rightLabel, checked, onToggle, ariaLabel }) 
       aria-checked={checked}
       aria-label={ariaLabel}
       onClick={onToggle}
-      className="inline-flex items-center rounded-full border border-[var(--line)] px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.06em] text-[var(--muted)] transition hover:border-[var(--olive-soft)]"
+      className={`inline-flex min-w-0 items-center justify-between rounded-full border px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.06em] text-[var(--muted)] transition hover:border-[var(--olive-soft)] ${buttonClasses}`}
     >
-      <span className={`min-w-7 text-center leading-none ${checked ? 'text-[var(--muted)]' : 'text-[var(--olive-soft)]'}`}>
+      <span className={`min-w-0 flex-1 text-center leading-none ${checked ? 'text-[var(--muted)]' : 'text-[var(--olive-soft)]'}`}>
         {leftLabel}
       </span>
-      <span className="relative mx-1.5 h-5 w-10 rounded-full bg-[var(--line)] p-0.5">
+      <span className="relative mx-1.5 h-5 w-10 shrink-0 rounded-full bg-[var(--line)] p-0.5">
         <span
           className={`absolute top-0.5 h-4 w-4 rounded-full bg-[var(--olive-soft)] transition-all duration-200 ${
             checked ? 'left-[1.3rem]' : 'left-0.5'
           }`}
         />
       </span>
-      <span className={`min-w-7 text-center leading-none ${checked ? 'text-[var(--olive-soft)]' : 'text-[var(--muted)]'}`}>
+      <span className={`min-w-0 flex-1 text-center leading-none ${checked ? 'text-[var(--olive-soft)]' : 'text-[var(--muted)]'}`}>
         {rightLabel}
       </span>
     </button>

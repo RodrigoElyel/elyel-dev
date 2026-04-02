@@ -7,6 +7,7 @@ const THEME_KEY = 'portfolio-theme'
 function App() {
   const [language, setLanguage] = useState(() => localStorage.getItem(LANG_KEY) || 'pt')
   const [theme, setTheme] = useState(() => localStorage.getItem(THEME_KEY) || 'light')
+  const [mobilePrefsOpen, setMobilePrefsOpen] = useState(false)
 
   useEffect(() => {
     localStorage.setItem(LANG_KEY, language)
@@ -28,6 +29,21 @@ function App() {
             <a href="#home" className="text-sm font-semibold tracking-[0.14em] text-[var(--olive-soft)]">
               {portfolioData.brand}
             </a>
+
+            <button
+              type="button"
+              onClick={() => setMobilePrefsOpen((current) => !current)}
+              className={`inline-flex h-10 w-10 items-center justify-center rounded-full border md:hidden ${
+                mobilePrefsOpen
+                  ? 'border-[var(--olive-soft)] bg-[color:color-mix(in_srgb,var(--olive-soft)_12%,transparent)] text-[var(--olive-soft)]'
+                  : 'border-[var(--line)] text-[var(--muted)]'
+              }`}
+              aria-label={language === 'en' ? 'Toggle preferences' : 'Abrir preferências'}
+              aria-expanded={mobilePrefsOpen}
+              aria-controls="mobile-preferences"
+            >
+              <SettingsIcon />
+            </button>
           </div>
 
           <ul className="-mx-1 flex gap-2 overflow-x-auto pb-1 text-xs text-[var(--muted)] md:mx-0 md:flex-1 md:justify-center md:gap-5 md:overflow-visible md:text-sm">
@@ -43,25 +59,30 @@ function App() {
             ))}
           </ul>
 
-          <div className="grid gap-2 md:hidden">
-            <MobileSettingRow
-              label={language === 'en' ? 'Language' : 'Idioma'}
-              value={language === 'en' ? 'EN' : 'PT'}
-              helper={language === 'en' ? 'Switch site copy' : 'Mudar idioma'}
-              onToggle={() => setLanguage((prev) => (prev === 'en' ? 'pt' : 'en'))}
-              toggleLabelLeft="PT"
-              toggleLabelRight="EN"
-              checked={language === 'en'}
-            />
-            <MobileSettingRow
-              label={language === 'en' ? 'Theme' : 'Tema'}
-              value={theme === 'dark' ? 'Dark' : 'Light'}
-              helper={language === 'en' ? 'Change appearance' : 'Mudar aparência'}
-              onToggle={() => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))}
-              toggleLabelLeft={ui.themeLight}
-              toggleLabelRight={ui.themeDark}
-              checked={theme === 'dark'}
-            />
+          <div
+            id="mobile-preferences"
+            className={`md:hidden grid gap-2 overflow-hidden transition-all duration-300 ease-out ${
+              mobilePrefsOpen ? 'max-h-44 opacity-100' : 'max-h-0 opacity-0'
+            }`}
+          >
+              <MobileSettingRow
+                label={language === 'en' ? 'Language' : 'Idioma'}
+                value={language === 'en' ? 'EN' : 'PT'}
+                helper={language === 'en' ? 'Switch site copy' : 'Mudar idioma'}
+                onToggle={() => setLanguage((prev) => (prev === 'en' ? 'pt' : 'en'))}
+                toggleLabelLeft="PT"
+                toggleLabelRight="EN"
+                checked={language === 'en'}
+              />
+              <MobileSettingRow
+                label={language === 'en' ? 'Theme' : 'Tema'}
+                value={theme === 'dark' ? 'Dark' : 'Light'}
+                helper={language === 'en' ? 'Change appearance' : 'Mudar aparência'}
+                onToggle={() => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))}
+                toggleLabelLeft={ui.themeLight}
+                toggleLabelRight={ui.themeDark}
+                checked={theme === 'dark'}
+              />
           </div>
 
           <div className="hidden items-center gap-2 md:flex">
@@ -349,6 +370,15 @@ function MobileSettingRow({ label, value, helper, onToggle, toggleLabelLeft, tog
         />
       </div>
     </div>
+  )
+}
+
+function SettingsIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-4.5 w-4.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" />
+      <path d="M19.4 13.5a7.8 7.8 0 0 0 .1-1.5 7.8 7.8 0 0 0-.1-1.5l2-1.5-1.9-3.2-2.4.8a7.2 7.2 0 0 0-2.6-1.5l-.4-2.5H9.9l-.4 2.5a7.2 7.2 0 0 0-2.6 1.5l-2.4-.8-1.9 3.2 2 1.5a7.8 7.8 0 0 0-.1 1.5 7.8 7.8 0 0 0 .1 1.5l-2 1.5 1.9 3.2 2.4-.8a7.2 7.2 0 0 0 2.6 1.5l.4 2.5h4.2l.4-2.5a7.2 7.2 0 0 0 2.6-1.5l2.4.8 1.9-3.2-2-1.5Z" />
+    </svg>
   )
 }
 

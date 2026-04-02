@@ -1,0 +1,85 @@
+@import 'tailwindcss';
+
+:root {
+  --bg: #0a0a0a;
+  --surface: #131313;
+  --line: #242424;
+  --text: #f6f6f6;
+  --muted: #c1c1c1;
+  --olive: #7f8f43;
+  --olive-soft: #9fb35a;
+  --olive-text: #d9e7a7;
+  --panel-start: rgba(255, 255, 255, 0.03);
+  --panel-end: rgba(0, 0, 0, 0.2);
+  --bg-accent-1: rgba(127, 143, 67, 0.25);
+  --bg-accent-2: rgba(127, 143, 67, 0.15);
+}
+
+[data-theme='light'] {
+  --bg: #f5f6f2;
+  --surface: #ffffff;
+  --line: #d7d9d1;
+  --text: #1a1a1a;
+  --muted: #4e5344;
+  --olive: #6f8138;
+  --olive-soft: #5e6d2d;
+  --olive-text: #3f4b1e;
+  --panel-start: rgba(255, 255, 255, 0.7);
+  --panel-end: rgba(0, 0, 0, 0.03);
+  --bg-accent-1: rgba(127, 143, 67, 0.24);
+  --bg-accent-2: rgba(127, 143, 67, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter Variable', 'Inter', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% -5%, var(--bg-accent-1), transparent 28%),
+    radial-gradient(circle at 95% 10%, var(--bg-accent-2), transparent 24%),
+    var(--bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--panel-start), var(--panel-end));
+  backdrop-filter: blur(2px);
+}
+
+.tag {
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.olive-chip {
+  border: 1px solid rgba(159, 179, 90, 0.4);
+  background: rgba(127, 143, 67, 0.16);
+}

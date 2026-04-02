@@ -46,6 +46,21 @@ Always collect these points:
 5. Preferred header placement (left, center, lockup with text).
 6. Fallback visual when logo is not available (typographic wordmark).
 
+### Logo Policy (Automatic Decision)
+Use this rule set to decide the brand representation in the LP:
+1. If a final brand logo exists in SVG or high-quality PNG:
+use the official logo in header and footer.
+2. If there is no final logo but strong initials exist:
+use a simple monogram (for example, RE) with consistent typography.
+3. If neither a final logo nor a monogram exists:
+use a typographic wordmark with the brand name (for example, elyel.dev).
+4. If light/dark logo variants are available:
+switch automatically according to theme.
+5. If no variants are available:
+use one neutral high-contrast version that works in both themes.
+6. Always preserve readability and safe spacing in mobile and desktop headers.
+7. Avoid heavy effects (strong shadow, bevel, excessive glow) that reduce legibility.
+
 ## Brief Template (Copy and Fill)
 Use this block at the start of the request.
 

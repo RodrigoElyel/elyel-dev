@@ -46,6 +46,21 @@ Sempre coletar estes pontos:
 5. Preferência de posição no header (esquerda, centro, assinatura com texto).
 6. Fallback visual quando não houver logo final (wordmark tipográfico).
 
+### Logo Policy (Decisão Automática)
+Use esta regra para definir como representar a marca na LP:
+1. Se existir logomarca final em SVG ou PNG de boa qualidade:
+usar logotipo oficial no header e rodapé.
+2. Se não existir logomarca final, mas existir iniciais fortes:
+usar monograma simples (ex.: RE) com tipografia consistente.
+3. Se não existir logomarca nem monograma definido:
+usar wordmark tipográfico com o nome de marca (ex.: elyel.dev).
+4. Se houver versões claro/escuro:
+alternar automaticamente conforme tema.
+5. Se não houver variações:
+usar uma versão neutra com contraste validado para ambos os temas.
+6. Sempre preservar legibilidade e área de respiro no header mobile e desktop.
+7. Nunca usar efeitos pesados (sombra forte, bevel, glow excessivo) que prejudiquem leitura.
+
 ## Template de Brief (Copiar e Preencher)
 Use este bloco no início da conversa com o agente.
 

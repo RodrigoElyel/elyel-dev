@@ -30,6 +30,7 @@ export const portfolioData = {
       photoText: 'Academic background and contact details.',
       photoSummary: 'Education',
       phoneLabel: 'Phone',
+      whatsappLabel: 'WhatsApp',
       emailLabel: 'Email',
       addressLabel: 'Address',
       linkedinLabel: 'LinkedIn',
@@ -63,6 +64,7 @@ export const portfolioData = {
       photoText: 'Formação acadêmica e dados de contato.',
       photoSummary: 'Formações',
       phoneLabel: 'Telefone',
+      whatsappLabel: 'WhatsApp',
       emailLabel: 'Email',
       addressLabel: 'Endereço',
       linkedinLabel: 'LinkedIn',
@@ -72,7 +74,8 @@ export const portfolioData = {
   translations: {
     en: {
       role: 'Mid-Level Software Engineer',
-      location: 'Brazil · Open to international remote opportunities',
+      location: 'Brazil · Remote Work',
+      // location: 'Brazil · Open to international remote opportunities',
       hero: {
         headline: 'Rodrigo Elyel Mid-Level Software Engineer',
         subheadline:
@@ -157,14 +160,20 @@ export const portfolioData = {
         message:
           'If you are hiring an engineer who can code, communicate, and deliver under real constraints, let\'s talk.',
         phone: '+55 86 995279594',
+        phoneHref: 'tel:+5586995279594',
+        whatsapp: '+55 86 995279594',
+        whatsappHref: 'https://wa.me/5586995279594',
         email: 'rodrigoelyelcb@gmail.com',
+        emailHref: 'mailto:rodrigoelyelcb@gmail.com',
         address: 'Rua Canadá, 995. Bairro Cidade Nova, Teresina-PI',
         linkedin: 'www.linkedin.com/in/rodrigo-elyel-developer',
+        linkedinHref: 'https://www.linkedin.com/in/rodrigo-elyel-developer/',
       },
     },
     pt: {
       role: 'Engenheiro de Software Pleno',
-      location: 'Brasil · Aberto a oportunidades internacionais remotas',
+      location: 'Brasil · Trabalho Remoto',
+      // location: 'Brasil · Aberto a oportunidades internacionais remotas',
       hero: {
         headline: 'Rodrigo Elyel Engenheiro de Software Pleno',
         subheadline:
@@ -249,9 +258,14 @@ export const portfolioData = {
         message:
           'Se você busca um engenheiro que programa, se comunica bem e entrega com consistência em cenários reais, vamos conversar.',
         phone: '+55 86 995279594',
+        phoneHref: 'tel:+5586995279594',
+        whatsapp: '+55 86 995279594',
+        whatsappHref: 'https://wa.me/5586995279594',
         email: 'rodrigoelyelcb@gmail.com',
+        emailHref: 'mailto:rodrigoelyelcb@gmail.com',
         address: 'Rua Canadá, 995. Bairro Cidade Nova, Teresina-PI',
         linkedin: 'www.linkedin.com/in/rodrigo-elyel-developer',
+        linkedinHref: 'https://www.linkedin.com/in/rodrigo-elyel-developer/',
       },
     },
   },

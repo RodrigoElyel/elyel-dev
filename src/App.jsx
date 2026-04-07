@@ -167,29 +167,46 @@ function App() {
                 </p>
                 <ul className="mt-3 space-y-2 text-sm leading-relaxed text-[var(--muted)]">
                   <li>
-                    <span className="text-[var(--text)]">{ui.phoneLabel}:</span> {locale.contact.phone}
+                    <span className="text-[var(--text)]">{ui.phoneLabel}:</span>{' '}
+                    <a href={locale.contact.phoneHref} className="underline-offset-2 hover:underline">
+                      {locale.contact.phone}
+                    </a>
                   </li>
                   <li>
-                    <span className="text-[var(--text)]">{ui.emailLabel}:</span> {locale.contact.email}
+                    <span className="text-[var(--text)]">{ui.whatsappLabel}:</span>{' '}
+                    <a
+                      href={locale.contact.whatsappHref}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="underline-offset-2 hover:underline"
+                    >
+                      {locale.contact.whatsapp}
+                    </a>
+                  </li>
+                  <li>
+                    <span className="text-[var(--text)]">{ui.emailLabel}:</span>{' '}
+                    <a href={locale.contact.emailHref} className="underline-offset-2 hover:underline">
+                      {locale.contact.email}
+                    </a>
                   </li>
                   <li>
                     <span className="text-[var(--text)]">{ui.addressLabel}:</span> {locale.contact.address}
                   </li>
                   <li>
-                    <span className="text-[var(--text)]">{ui.linkedinLabel}:</span> {locale.contact.linkedin}
+                    <span className="text-[var(--text)]">{ui.linkedinLabel}:</span>{' '}
+                    <a
+                      href={locale.contact.linkedinHref}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="underline-offset-2 hover:underline"
+                    >
+                      {locale.contact.linkedin}
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
           </aside>
-        </section>
-
-        <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {locale.hero.highlights.map((highlight) => (
-            <article key={highlight} className="panel rounded-2xl p-4 sm:p-5">
-              <p className="text-sm leading-relaxed text-[var(--text)]">{highlight}</p>
-            </article>
-          ))}
         </section>
 
         <section id="about" className="panel rounded-3xl p-6 sm:p-8 md:p-10">
@@ -200,6 +217,15 @@ function App() {
             ))}
           </div>
         </section>
+        
+        <section className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {locale.hero.highlights.map((highlight) => (
+            <article key={highlight} className="panel rounded-2xl p-4 sm:p-5">
+              <p className="text-sm leading-relaxed text-[var(--text)]">{highlight}</p>
+            </article>
+          ))}
+        </section>
+
 
         <section id="experience" className="panel rounded-3xl p-6 sm:p-8 md:p-10">
           <SectionLabel>{ui.sectionLabels.experience}</SectionLabel>
@@ -297,12 +323,6 @@ function App() {
                 </a>
               ))}
             </div>
-            <a
-              href="mailto:rodrigoelyelcb@gmail.com"
-              className="mt-6 inline-flex rounded-full bg-[var(--olive)] px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-[var(--olive-soft)]"
-            >
-              {ui.contactButton}
-            </a>
           </div>
         </section>
       </main>
